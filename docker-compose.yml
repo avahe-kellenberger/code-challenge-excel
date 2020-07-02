@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  whitebox-db:
+    image: whitebox
+    ports: 
+      - "3306:3306"
+    volumes:
+      - db:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "whitebox"
+      MYSQL_ROOT_PASSWORD: "whitebox"
+
+volumes:
+  db:
+
